@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relLayOutside"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradient"
+    tools:context=".LoginInRegister">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHoldAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp">
+
+
+        <RelativeLayout
+            android:id="@+id/relLayMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/linearLoginTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:background="@color/GreenAppColor"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/transparentlogologingradient2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewSquare"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/linearLoginTop"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:rotation="45"
+                android:src="@drawable/square" />
+
+            <RelativeLayout
+                android:id="@+id/relLayUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewSquare"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/editTextBG">
+
+                <ImageView
+                    android:id="@+id/imageViewPerson"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/GreenTransparentAppColor"
+                    android:padding="8dp"
+                    android:src="@drawable/person_add_icon" />
+
+                <EditText
+                    android:id="@+id/editTextUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageViewPerson"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageViewPerson"
+                    android:background="@color/editTextBG"
+                    android:hint="user"
+                    android:paddingLeft="20dp"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayUsername"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp">
+
+                <ImageView
+                    android:id="@+id/imageViewLockIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/GreenTransparentAppColor"
+                    android:padding="8dp"
+                    android:src="@drawable/lock_icon"/>
+
+                <EditText
+                    android:id="@+id/editTextPasswiord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageViewLockIcon"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageViewLockIcon"
+                    android:background="@color/editTextBG"
+                    android:hint="password"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/relLayBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relLayPass"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp">
+
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/GreenAppColor"
+                    android:fontFamily="sans-serif"
+                    android:text="log in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />/>
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
