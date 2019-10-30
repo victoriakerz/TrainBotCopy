@@ -20,7 +20,9 @@
         <RelativeLayout
             android:id="@+id/relativeBig"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true">
 
             <LinearLayout
                 android:id="@+id/linearTop"

@@ -1,13 +1,12 @@
 package ca.douglascollege.trainbot;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.core.widget.NestedScrollView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -35,9 +34,6 @@ public class Register extends AppCompatActivity {
         initObjects();
     }
     private void initViews() {
-
-
-
         textInputLayoutName = (EditText) findViewById(R.id.editTextUsername);
         textInputLayoutEmail = (EditText) findViewById(R.id.editTextEmail);
         textInputLayoutPassword = (EditText) findViewById(R.id.editTextPassword);
@@ -45,13 +41,44 @@ public class Register extends AppCompatActivity {
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonLoginLink = (Button) findViewById(R.id.buttonGoToLogin);
-
     }
     private void initListeners() {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 postDataToSQLite();
+            }
+        });
+        textInputLayoutName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+        textInputLayoutPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+        textInputLayoutConfirmPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
+            }
+        });
+        textInputLayoutEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    hideKeyboard(v);
+                }
             }
         });
         buttonLoginLink.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +88,6 @@ public class Register extends AppCompatActivity {
                 startActivity(regiIntent);
             }
         });
-
     }
     private void initObjects() {
         databaseHelper = new Database(Register.this);
@@ -95,17 +121,16 @@ public class Register extends AppCompatActivity {
 
             databaseHelper.addUser(user);
 
-            // Snack Bar to show success message that record saved successfully
             Toast.makeText(Register.this,"User Created",Toast.LENGTH_SHORT).show();
             emptyInputEditText();
 
-
         } else {
-            // Snack Bar to show error message that record already exists
             Toast.makeText(Register.this,"Email already exists",Toast.LENGTH_SHORT).show();
         }
-
-
+    }
+    public void hideKeyboard(View view) {
+        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     private void emptyInputEditText() {
         textInputLayoutName.setText(null);
@@ -116,5 +141,4 @@ public class Register extends AppCompatActivity {
     /**
      * This method is to initialize objects to be used
      */
-
 }
