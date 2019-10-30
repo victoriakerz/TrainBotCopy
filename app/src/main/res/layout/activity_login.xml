@@ -3,25 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relLayOutside"
+    android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_gradient"
+    android:longClickable="true"
     tools:context=".LoginInRegister">
+
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardHoldAll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="40dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="40dp">
 
 
         <RelativeLayout
             android:id="@+id/relLayMain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
 
             <LinearLayout
@@ -29,14 +33,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:gravity="center"
                 android:background="@color/GreenAppColor"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imageViewLogo"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"
+                    android:layout_height="200dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:padding="10dp"
@@ -59,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageViewSquare"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:layout_marginRight="30dp"
                 android:background="@color/editTextBG">
 
@@ -91,7 +95,8 @@
                 android:layout_below="@+id/relLayUsername"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginRight="30dp">
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp">
 
                 <ImageView
                     android:id="@+id/imageViewLockIcon"
@@ -99,7 +104,7 @@
                     android:layout_height="40dp"
                     android:background="@color/GreenTransparentAppColor"
                     android:padding="8dp"
-                    android:src="@drawable/lock_icon"/>
+                    android:src="@drawable/lock_icon" />
 
                 <EditText
                     android:id="@+id/editTextPasswiord"
@@ -113,8 +118,24 @@
                     android:paddingLeft="20dp"
                     android:textColor="@color/cardview_light_background"
                     android:textSize="15sp" />
-            </RelativeLayout>
 
+                <Button
+                    android:id="@+id/buttonForgotPassword"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/imageViewLockIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="0dp"
+                    android:background="@color/colorInvisible"
+                    android:shadowColor="@color/colorInvisible"
+                    android:text="forgot"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="13sp" />
+
+
+            </RelativeLayout>
 
 
             <RelativeLayout
@@ -123,25 +144,40 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relLayPass"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp">
 
                 <Button
                     android:id="@+id/buttonLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="0dp"
                     android:background="@color/GreenAppColor"
                     android:fontFamily="sans-serif"
                     android:text="log in"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="13sp" />/>
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/buttonCreateNewAccount"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/buttonLogin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/colorInvisible"
+                    android:shadowColor="@color/colorInvisible"
+                    android:text="55"
+                    android:textAllCaps="false"
+                    android:textColor="@color/GreenAppColor"
+                    android:textSize="13sp" />
             </RelativeLayout>
-
-
 
 
         </RelativeLayout>
