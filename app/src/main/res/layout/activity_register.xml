@@ -211,6 +211,7 @@
                     android:textSize="13sp" />
 
                 <Button
+                    android:id="@+id/buttonGoToLogin"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

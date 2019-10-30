@@ -29,7 +29,11 @@ public class LoginInRegister extends AppCompatActivity {
             public void onClick(View v) {
                 String name = uname.getText().toString();
                 String password = pswd.getText().toString();
-                int id = checkUser(new User(name, password));
+                User newuser = new User();
+                newuser.setName(name);
+                newuser.setPassword(password);
+                int id = checkUser(newuser);
+
                 if (id == -1){
                     Toast.makeText(LoginInRegister.this,"User Does Not Exist",Toast.LENGTH_SHORT).show();
                 }
@@ -41,9 +45,9 @@ public class LoginInRegister extends AppCompatActivity {
 
         db=new Database(LoginInRegister.this);
         //inserting dummy users
-        db.addUser(new User("Ankur", "Bansal"));
-        db.addUser(new User("Vibhor", "Tayal"));
-        db.addUser(new User("user1", "user1"));
+//        db.addUser(new User("Ankur", "Bansal"));
+//        db.addUser(new User("Vibhor", "Tayal"));
+//        db.addUser(new User("user1", "user1"));
     }
 
     public int checkUser(User user) {
