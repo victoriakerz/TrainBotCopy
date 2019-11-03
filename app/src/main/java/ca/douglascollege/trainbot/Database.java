@@ -136,19 +136,20 @@ public class Database extends SQLiteOpenHelper {
                 new String[]{String.valueOf(user.getId())});
         db.close();
     }
-    public boolean checkUser(String email) {
+    public boolean checkUser(String username) {
 
         // array of columns to fetch
         String[] columns = {
                 COLUMN_USER_ID
         };
+
         SQLiteDatabase db = this.getReadableDatabase();
 
         // selection criteria
-        String selection = COLUMN_USER_EMAIL + " = ?";
+        String selection = COLUMN_USER_NAME + " = ?";
 
         // selection argument
-        String[] selectionArgs = {email};
+        String[] selectionArgs = {username};
 
         // query user table with condition
         /**
@@ -170,7 +171,6 @@ public class Database extends SQLiteOpenHelper {
         if (cursorCount > 0) {
             return true;
         }
-
         return false;
     }
 //    public boolean checkUser(String email) {

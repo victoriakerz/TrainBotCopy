@@ -5,18 +5,25 @@
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_confirm_password">Confirm Password</string>
-    <string name="text_login">LOG IN</string>
+
     <string name="text_register">REGISTER</string>
     <string name="error_message_name">Enter Username</string>
     <string name="error_message_email">Enter Email</string>
     <string name="error_message_password">Enter Password</string>
     <string name="repeat_password">Re-enter Password</string>
     <string name="success_message">Registration Successful</string>
-    <string name="text_not_member">No account yet? Create one</string>
-    <string name="text_already_member">Already a member? Log in</string>
+
+    <string name="prompt_already_member">Already a member? Log in</string>
     <string name="error_email_exists">Email Already Exists</string>
     <string name="error_password_match">Passwords Do Not Match</string>
-    <string name="error_message_age">Enter Age</string>
 
+    <string name="forgot_password">Forgot password?</string>
+
+
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_create_account">No account yet? Create one</string>
+    <string name="text_login">LOGIN</string>
+    <string name="text_logIn">LOG IN</string>
 
 </resources>
