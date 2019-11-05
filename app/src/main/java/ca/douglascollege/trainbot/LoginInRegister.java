@@ -33,7 +33,7 @@ public class LoginInRegister extends AppCompatActivity {
     }
     private void initViews() {
         userNameLogin = (EditText) findViewById(R.id.editTextUsernameLogin);
-        passwordLogin = (EditText) findViewById(R.id.editTextPasswordLogIn);
+        passwordLogin = (EditText) findViewById(R.id.editTextPasswordLogin);
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
     }

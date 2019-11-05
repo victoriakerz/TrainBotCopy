@@ -15,4 +15,22 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/buttonSQLCon"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="439dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Button"
+        app:layout_constraintStart_toEndOf="@+id/buttonSQLCon"
+        tools:layout_editor_absoluteY="520dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
